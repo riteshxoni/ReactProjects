@@ -247,10 +247,16 @@ let products =
   }
 ]
 
+let similarproducts = products.filter((product)=> product.rating.rate>4)
 
   return (
     <div className='row justify-content-center g-3 container mx-auto my-3'>
-        {products.map((product, index)=><Product key={index} item={product} />)}
+        {
+          products.length>0 ?
+              similarproducts.map((product, index)=><Product key={index} item={product} />)
+              :<p>No Products</p>
+        }
+
     </div>
      
   )
