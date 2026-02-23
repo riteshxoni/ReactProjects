@@ -24,6 +24,7 @@ const App = () => {
       setCourse(value);
     } 
   }
+  
   let handleSubmit = (e)=>
   {
     e.preventDefault();
